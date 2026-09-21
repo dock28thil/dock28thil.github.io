@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二胡琴弦数目 - 传统乐器构造与演奏指南</title>
+    <meta name="description" content="二胡琴弦数目解析：二胡通常使用两根琴弦。本文详细介绍二胡弦数的由来、标准配置、粗细区别及调音方法，帮助初学者正确认识二胡构造。">
+    <meta name="keywords" content="二胡琴弦数目,二胡构造,二胡调音,二胡弦数,中国传统乐器">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b4513;
+            --secondary-color: #d2b48c;
+            --bg-color: #fdfbf7;
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            font-size: 16px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #a0522d;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .main-content {
+            padding: 40px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #f5deb3 100%);
+            border-radius: 12px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5d4037;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Comparison Table */
+        .table-wrapper {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: var(--light-text);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <span>国乐百科</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#structure">构造原理</a></li>
+                <li><a href="#types">弦数类型</a></li>
+                <li><a href="#usage">调音与保养</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container main-content">
+
+    <section class="hero">
+        <h1>二胡琴弦数目：两根琴弦的奥秘</h1>
+        <p>二胡作为一种历史悠久的拉弦乐器，其核心构造中最为基础的问题便是琴弦数目。了解二胡琴弦数目及其特性，是掌握二胡演奏的第一步。</p>
+    </section>
+
+    <section id="structure">
+        <h2 class="section-title">标准构造：为什么是两根弦？</h2>
+        <div class="grid-2">
+            <article class="card">
+                <div class="card-icon">🎻</div>
+                <h3>传统定式</h3>
+                <p>二胡采用两根琴弦进行演奏，这是中国民族拉弦乐器中最经典的配置。这种设计使得二胡能够同时发出两个音高，通过按指产生不同的音程关系，从而表达丰富的旋律。</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">🎵</div>
+                <h3>五度定弦</h3>
+                <p>标准二胡的两根琴弦通常按照五度关系定弦。外弦（粗弦）音高较高，内弦（细弦）音高较低。这种定弦方式符合人类听觉习惯，便于演奏常用音阶和旋律。</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="types">
+        <h2 class="section-title">二胡弦数的具体配置</h2>
+        <p>虽然标准二胡只有两根弦，但在不同历史时期和特定演奏需求下，也存在其他形式的变体。以下是关于二胡琴弦数目及其相关配置的详细说明：</p>
+        
+        <div class="grid-3" style="margin-top: 30px;">
+            <div class="card">
+                <h3>内弦</h3>
+                <p>靠近演奏者身体一侧的弦，通常较粗。由于弦径较粗，振动幅度大，因此音量较强，音色浑厚、深沉，常用于旋律的骨干音或低音支撑。</p>
+            </div>
+            <div class="card">
+                <h3>外弦</h3>
+                <p>靠近琴弓外侧的弦，通常较细。弦径较细，振动相对灵敏，音色明亮、清脆。常用于演奏高音旋律或装饰音。</p>
+            </div>
+            <div class="card">
+                <h3>特殊变体</h3>
+                <p>历史上曾出现过三弦二胡等变体，但在现代标准教学和演奏中，绝大多数二胡依然保持标准的两根琴弦配置。</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <h3 style="margin-bottom: 20px; font-size: 1.2rem;">常见音高配置参考</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>弦别</th>
+                            <th>常用定弦音高</th>
+                            <th>特点描述</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>外弦</td>
+                            <td>A (La)</td>
+                            <td>音色明亮，适合高音旋律</td>
+                        </tr>
+                        <tr>
+                            <td>内弦</td>
+                            <td>E (Mi)</td>
+                            <td>音色浑厚，适合低音基础</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage">
+        <h2 class="section-title">调音与弦数关系</h2>
+        <p>二胡的两根琴弦通过“五度定弦”来保持音程的稳定性。调音是演奏前最重要的准备工作，直接关系到音准和音色。</p>
+        
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>调音步骤</h3>
+            <ul class="feature-list">
+                <li>将二胡放在平稳的桌面上，避免琴身晃动。</li>
+                <li>左手按住内弦的千斤（琴弦固定点），右手持弓在两弦之间拉动。</li>
+                <li>调整外弦微调旋钮，直到听到两个音高相差五度（例如 A 与 E）。</li>
+                <li>随后调整内弦微调旋钮，使其与外弦形成正确的音程关系。</li>
+            </ul>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>更换琴弦</h3>
+                <p>当二胡弦数减少（断弦）时，必须同时更换两根琴弦，或者至少确保两根弦的张力一致。单根更换容易导致音准偏差和琴码移位。</p>
+            </div>
+            <div class="card">
+                <h3>材质影响</h3>
+                <p>琴弦的材质（如钢丝弦、尼龙弦）也会影响振动，但无论材质如何，二胡琴弦数目始终维持在两根。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2 class="section-title">常见问题 (FAQ)</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">二胡到底有几根弦？</div>
+            <div class="faq-answer">
+                <p>标准的二胡有<strong>两根琴弦</strong>。一根是内弦（细弦），一根是外弦（粗弦）。这是二胡最核心的特征。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">为什么二胡只有两根弦？</div>
+            <div class="faq-answer">
+                <p>两根弦的配置简化了乐器构造，降低了演奏难度，同时通过五度定弦能够覆盖宽广的音域。这种设计既保留了民族乐器的特色，又便于初学者入门。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">断了一根弦还能演奏吗？</div>
+            <div class="faq-answer">
+                <p>不可以。二胡是双弦乐器，断了一根弦后无法维持正常的音准和音色，必须及时更换琴弦才能继续演奏。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">有没有三根弦的二胡？</div>
+            <div class="faq-answer">
+                <p>虽然历史上存在三弦二胡或改良型二胡，但在大众普及的普通二胡教学和演奏中，主流依然是两根琴弦的标准配置。</p>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p>专注于中国传统乐器知识普及，为音乐爱好者和学习者提供专业的资料查询服务。</p>
+            </div>
+            <div class="footer-col">
+                <h4>相关分类</h4>
+                <ul>
+                    <li><a href="#">古琴</a></li>
+                    <li><a href="#">琵琶</a></li>
+                    <li><a href="#">二胡技巧</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">乐器选购</a></li>
+                    <li><a href="#">调音指南</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 国乐百科. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 简单的 FAQ 切换交互
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // 关闭其他打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
