@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="R52专业工具箱-为您提供高效的R52系列工具下载、使用教程、参数配置及故障排查指南。">
+    <meta name="keywords" content="r52, R52工具, R52下载, R52参数, R52故障">
+    <title>r52 - R52系列工具下载与专业配置指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .btn-outline {
+            border-color: var(--border-color);
+            background: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Main Layout */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 1rem;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            color: var(--text-sub);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            background-color: #cbd5e1;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-sub);
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="%2394a3b8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Section Styles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-link {
+            font-size: 0.875rem;
+            color: var(--primary-color);
+        }
+
+        /* Download Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            height: 120px;
+            background-color: #f1f5f9;
+            position: relative;
+        }
+
+        .card-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tag {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .card-body {
+            padding: 1.25rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-sub);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        /* Features List */
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f8fafc;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            display: none;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #cbd5e1;
+            padding: 3rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>R52</span> 工具箱
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#downloads">工具下载</a></li>
+                    <li><a href="#features">功能特性</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#downloads" class="btn btn-outline">登录</a>
+                <a href="#downloads" class="btn btn-primary">立即下载</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>高效稳定的 R52 系列工具解决方案</h1>
+                <p>R52 工具箱为您提供专业级的配置、诊断与优化服务。无论是日常维护还是深度调试，我们都能满足您的需求，确保数据安全与系统稳定。</p>
+                <div class="hero-actions">
+                    <a href="#downloads" class="btn btn-primary">免费获取 R52</a>
+                    <a href="#features" class="btn btn-outline">查看功能详情</a>
+                </div>
+            </div>
+            <div class="hero-image" role="img" aria-label="R52 工具界面示意图">
+                <!-- Placeholder for tool interface visual -->
+                <span>工具界面预览区域</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="section-header">
+                <h2 class="section-title">核心功能特性</h2>
+                <a href="#" class="section-link">了解更多 &rarr;</a>
+            </div>
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon">⚡</span>
+                    <h3 class="feature-title">极速启动</h3>
+                    <p class="feature-text">优化的启动流程，减少等待时间，秒级响应您的操作指令。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <h3 class="feature-title">安全加密</h3>
+                    <p class="feature-text">采用行业标准加密算法，保护您的配置文件与敏感数据。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">实时监控</h3>
+                    <p class="feature-text">7x24小时后台监控，实时反馈运行状态与系统日志。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔧</span>
+                    <h3 class="feature-title">一键修复</h3>
+                    <p class="feature-text">内置智能诊断引擎，自动识别并修复常见配置错误。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads">
+            <div class="section-header">
+                <h2 class="section-title">热门工具下载</h2>
+                <a href="#" class="section-link">查看全部版本 &rarr;</a>
+            </div>
+            <div class="grid-container">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="tag">推荐</span>
+                        <img src="https://picsum.photos/seed/r52tool1/400/200" alt="R52 标准版工具图标">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">R52 标准版 v2.4</h3>
+                        <p class="card-desc">包含基础配置、参数查询及日志导出功能，适合日常使用。</p>
+                        <div class="card-meta">
+                            <span>大小: 45.2 MB</span>
+                            <span>更新: 2023-10</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="tag">专业</span>
+                        <img src="https://picsum.photos/seed/r52tool2/400/200" alt="R52 专业版工具图标">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">R52 专业版 v3.1</h3>
+                        <p class="card-desc">增加批量操作、自动化脚本及深度数据恢复功能。</p>
+                        <div class="card-meta">
+                            <span>大小: 68.5 MB</span>
+                            <span>更新: 2023-11</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="tag">便携</span>
+                        <img src="https://picsum.photos/seed/r52tool3/400/200" alt="R52 便携版工具图标">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">R52 便携版 v2.4</h3>
+                        <p class="card-desc">无需安装，双击运行，适合临时应急使用。</p>
+                        <div class="card-meta">
+                            <span>大小: 12.8 MB</span>
+                            <span>更新: 2023-09</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="tag">API</span>
+                        <img src="https://picsum.photos/seed/r52tool4/400/200" alt="R52 开发者工具图标">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">R52 开发包 SDK</h3>
+                        <p class="card-desc">为开发者提供接口文档与调试工具，支持二次开发。</p>
+                        <div class="card-meta">
+                            <span>大小: 8.2 MB</span>
+                            <span>更新: 2023-12</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">下载</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="section-header">
+                <h2 class="section-title">常见问题解答</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        R52 工具支持哪些操作系统？
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        R52 工具目前支持 Windows 10/11（64位）以及 macOS 12 及以上版本。建议使用最新版操作系统以获得最佳兼容性和性能。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        下载的文件安全吗？需要杀毒吗？
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        我们的软件均经过严格的代码审计和第三方安全扫描。为了确保安全，建议在下载后先使用官方杀毒软件进行扫描，确认无误后再运行。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        如何获取技术支持？
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        您可以通过页面底部的联系表单提交工单，或加入我们的官方技术交流群（群号：R52-888）。我们的技术团队会在 24 小时内回复您的咨询。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        R52 免费版和专业版有什么区别？
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        免费版包含核心基础功能，但限制并发数和导出数据量。专业版解锁所有高级功能，支持无限并发，并提供专属技术支持服务。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>R52 工具箱</h4>
+                <p style="font-size: 0.875rem; line-height: 1.6; color: #94a3b8;">
+                    致力于为用户提供最专业、最稳定、最安全的 R52 系列工具软件。让技术更简单。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#downloads">软件下载</a></li>
+                    <li><a href="#features">功能介绍</a></li>
+                    <li><a href="#faq">帮助中心</a></li>
+                    <li><a href="#">更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>support@r52-tool.com</li>
+                    <li>400-123-4567</li>
+                    <li>北京市朝阳区科技园 A 座</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 R52 工具箱. 保留所有权利. 本网站为演示页面，非官方网站。
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
